@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://dec41.user.srcf.net/ -->
+<html><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Dexter Chua
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="font" href="http://dec41.user.srcf.net/includes/fonts/lora-v14-latin-regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="http://dec41.user.srcf.net/includes/fonts/marcellus-sc-v7-latin-regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="http://dec41.user.srcf.net/includes/favicon.ico">
+    <link href="./Dexter Chua_files/fonts.css" rel="stylesheet">
+    <link href="./Dexter Chua_files/style.css" rel="stylesheet">
+    <link href="./Dexter Chua_files/katex.min.css" rel="stylesheet">
+    
+<style type="text/css">
+footer {
+    display: none;
+}
+
+</style>
+  <style>.crx_bdwk_down_wrap {
+    top: 70%;
+    left: 0;
+    position: fixed;
+    z-index: 99999999;
+    color: #fff;
+    user-select: none;
+}
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading {
+        background-color: #666;
+        cursor: wait;
+        width: 126px;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading p {
+            font-size: 14px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading small {
+            font-size: 10px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_btn {
+        width: 126px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #dd5a57;
+        position: relative;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color: #666;
+        font-size: 12px;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div {
+            position: relative;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:after {
+                content: ' ';
+                height: 12px;
+                width: 1px;
+                background-color: #eee;
+                position: absolute;
+                top: 10px;
+                right: 0;
+                transform: scaleX(0.5);
+            }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:last-child:after {
+                    display: none;
+                }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_check {
+            flex: 1;
+            color: #dd5a57;
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_uncheck {
+            flex: 1;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: lighter;
+        }
+</style></head>
+  <body>
+    <header>
+      Dexter Chua
+
+    </header>
+    <main>
+    <section>
+  <h1>About Me</h1>
+  <p>I was a PhD student at <a href="http://www.math.harvard.edu/">Harvard</a> between 2018 and 2022. Previously, I did my undergraduate and Part III at <a href="https://www.maths.cam.ac.uk/">Cambridge</a> (2014–2018).</p><p>
+</p></section>
+<section>
+  <h1>Contact Me</h1>
+  <p>You can email me at <a href="mailto:dec41@srcf.net">dec41@srcf.net</a>.</p>
+</section>
+<section>
+  <h1>Adams Spectral Sequence for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>m</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">tmf</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span></h1>
+  <p>I have documented the calculation of the Adams spectral sequence of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>m</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">tmf</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> at the prime <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> <a href="http://dec41.user.srcf.net/sseq/tmf/">here</a> (warning: this downloads a 12MB file behind the scenes).</p>
+  <p>This calculation was made with computer assistance. There is an <a href="https://spectralsequences.github.io/rust_webserver/">online version</a> of the software, and the source can be found on <a href="https://github.com/spectralsequences/rust_webserver">GitHub</a>. See the <code>README</code> on GitHub for technical details.</p>
+  <p>The software computes the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">E_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> page and products, and propagates differentials via the Leibniz rule. The program is capable of resolving an arbitrary (finite dimensional or finitely generated) Steenrod module and assisting the computation of the associated Adams spectral sequence. It is also designed with the intention to be able to aid other spectral sequence calculations (as long as the modules are over <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="double-struck">F</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\mathbb{F}_p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.974998em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathbb">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span>), but no such applications have been coded at the moment. It was initially developed by <a href="https://math.mit.edu/~hood/">Hood Chatham</a> and I later joined the development.</p>
+  <p>The save file for the calculation can be found <a href="http://dec41.user.srcf.net/sseq/tmf/tmf">here</a>, which can be imported into the resolver to reproduce the calculation. (However, doing it on the online version above is unwise)</p>
+</section>
+<section>
+  <h1>Steenrod operations</h1>
+  <p>Using <a href="https://arxiv.org/abs/1909.03117">an algorithm of Christian Nassau</a>, I calculated some Steenrod operations in Ext of the Steenrod algebra and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span>. The results are documented <a href="http://dec41.user.srcf.net/steenrod">here</a>, and they go beyond what is in Bruner's tables.</p>
+</section>
+
+<section>
+  <h1>Expository Writings</h1>
+  <p>Some miscellaneous expository writings. The word "expository" refers to the lack of originality, as opposed to any claim of comprehensibility or correctness.</p>
+
+  <p>Clicking the title below will lead to a web version of the note, which is an experimental feature — let me know if anything seems broken. Click "pdf" for a downloadable pdf version.</p>
+  <ul>
+    <li><a href="http://dec41.user.srcf.net/exp/syn/index.html">Construction of synthetic spectra</a> (<a href="http://dec41.user.srcf.net/exp/syn/syn.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/tmf_rp/index.html">Adams spectral sequence of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">f</mi></mrow><mo>∧</mo><msup><mrow><mi mathvariant="double-struck">R</mi><mi mathvariant="double-struck">P</mi></mrow><mi mathvariant="normal">∞</mi></msup></mrow><annotation encoding="application/x-tex">\mathrm{tmf} \wedge \mathbb{RP}^\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">tmf</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.743182em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">RP</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.743182em;"><span style="top:-3.1417900000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span></span></span></span></span></span></span></span></a> (<a href="http://dec41.user.srcf.net/exp/tmf_rp/tmf_rp.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/borwein/index.html">Borwein–Borwein integrals and sums</a> (<a href="http://dec41.user.srcf.net/exp/borwein/borwein.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/en_operad/index.html">Homology of the 𝔼<sub>d</sub> operad</a> (<a href="http://dec41.user.srcf.net/exp/en_operad/en_operad.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/coct/index.html">Complex oriented cohomology theories</a> (<a href="http://dec41.user.srcf.net/exp/coct/coct.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/freed-hopkins/index.html">Chern–Weil forms and abstract homotopy theory</a> (<a href="http://dec41.user.srcf.net/exp/freed-hopkins/freed-hopkins.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/motivic/index.html">Introduction to Motivic Homotopy Theory</a> (<a href="http://dec41.user.srcf.net/exp/motivic/motivic.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/bpqs/index.html">The Barratt–Priddy–Quillen–Segal theorem</a> (<a href="http://dec41.user.srcf.net/exp/bpqs/bpqs.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/factorization/index.html">Goodwillie filtration and factorization homology</a> (<a href="http://dec41.user.srcf.net/exp/factorization/factorization.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/bott_periodicity/index.html">Bott Periodicity</a> (<a href="http://dec41.user.srcf.net/exp/bott_periodicity/bott_periodicity.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/heat_kernel/index.html">The Heat Kernel</a> (<a href="http://dec41.user.srcf.net/exp/heat_kernel/heat_kernel.pdf">pdf</a>) ← this is my <a href="https://www.math.harvard.edu/graduate/guide-to-graduate-study/">minor thesis</a></li>
+    <li>Geometric Topology (<a href="http://dec41.user.srcf.net/exp/geometric_topology/geometric_topology.pdf">pdf</a>) ← this is my <a href="https://www.maths.cam.ac.uk/postgrad/part-iii/current/examinations-and-essays">Part III essay</a></li>
+    <li><a href="http://dec41.user.srcf.net/exp/self_maps/index.html">Construction of v<sub>1</sub> and v<sub>2</sub> self-maps</a> (<a href="http://dec41.user.srcf.net/exp/self_maps/self_maps.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/sp_ring/index.html">Ring Structures on S/p</a> (<a href="http://dec41.user.srcf.net/exp/sp_ring/sp_ring.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/global_analysis/index.html">Global Analysis – Hodge Decomposition Theorem</a> (<a href="http://dec41.user.srcf.net/exp/global_analysis/global_analysis.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/clifford/index.html">Clifford Algebra and Bott Periodicity</a> (<a href="http://dec41.user.srcf.net/exp/clifford/clifford.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/etale_fundamental_group/index.html">The Étale Fundamental Group (</a><a href="http://dec41.user.srcf.net/exp/etale_fundamental_group.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/lemniscate_sine/index.html">The Lemniscate Sine (</a><a href="http://dec41.user.srcf.net/exp/lemniscate_sine.pdf">pdf</a>)</li>
+    <li><a href="http://dec41.user.srcf.net/exp/period_3/index.html">Period 3 orbits</a> (<a href="http://dec41.user.srcf.net/exp/period_3/period_3.pdf">pdf</a>)</li>
+  </ul>
+</section>
+<section>
+  <h1>Cambridge Course Notes</h1>
+  <p>When I was in Cambridge, I typed up my lecture notes for the courses I attended. They can be found <a href="http://dec41.user.srcf.net/notes/">here</a>.</p>
+</section>
+<section>
+  <h1>Computer Drawings</h1>
+  <p>As a means of <strike>procrastination</strike> learning how to use HTML5 canvas, I produced the following drawings/simulations:</p>
+  <ul>
+    <li><a href="http://dec41.user.srcf.net/canvas/brownian">Brownian motion</a></li>
+    <li><a href="http://dec41.user.srcf.net/canvas/conformal">Conformal maps</a></li>
+  </ul>
+</section>
+<section>
+  <h1>Grid paper</h1>
+  <p>I wrote a web page that produces <a href="http://dec41.user.srcf.net/grid/">grid papers</a>. The source code is available on <a href="https://github.com/dalcde/grid/">GitHub</a>. Feature requests are welcome.</p>
+</section>
+<section>
+  <h1>PDF Cropping</h1>
+  <p>I also wrote a web page that helps you <a href="http://dec41.user.srcf.net/crop/">crop PDFs</a> with a specified aspect ratio. Feature requests and bug reports are welcome.</p>
+</section>
+<section>
+  <h1>Miscellaneous</h1>
+  <ul>
+    <li><a href="http://dec41.user.srcf.net/misc/adem">Some Adem relations</a></li>
+    <li><a href="http://dec41.user.srcf.net/misc/latex-tricks">Some LaTeX tricks</a></li>
+    <li><a href="http://dec41.user.srcf.net/misc/bp">Some formulas about BP</a></li>
+  </ul>
+</section>
+<section>
+  <h1>Other Involvements</h1>
+  <p>I co-organized the <a href="http://dec41.user.srcf.net/bott">Bott periodicity seminar</a> during Spring 2019.</p>
+  <p>I have been on the committee of the Cambridge student societies <a href="https://archim.soc.srcf.net/">The Archimedeans</a>, <a href="https://physics.soc.srcf.net/">CUPS</a>, the <a href="https://srcf.net/">SRCF</a> and the <a href="https://www.rcsa.co.uk/">RCSA</a>. I am also a sysadmin of the SRCF.</p>
+</section>
+<section>
+  <h1>Privacy Statement</h1>
+  <p>I have a <a href="http://dec41.user.srcf.net/privacy">Privacy Statement</a> as required by <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">law</a> (maybe).</p>
+</section>
+
+    </main>
+    
+    <footer>
+      <a href="http://dec41.user.srcf.net/">&lt; Back to home</a>
+    </footer>
+  
+
+</body></html>
