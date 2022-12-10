@@ -1,0 +1,77 @@
+---
+title: "哈希值计算器"
+layout: page
+navigatable: true
+---
+<main>
+<form id="hashWidget">
+	<div><label>算法</label><select id="algorithm">
+		<option>MD5</option>
+		<option>SHA-1</option>
+		<option>SHA-224</option>
+		<option>SHA3-224</option>
+		<option>SHA-256</option>
+		<option>SHA3-256</option>
+		<option>SHA-384</option>
+		<option>SHA3-384</option>
+		<option>SHA-512</option>
+		<option>SHA3-512</option>
+		<option>SHAKE128</option>
+		<option>SHAKE256</option>
+	</select><input id="length" type="number" min="8" step="8" value="8" disabled></div>
+	<div><label>输入</label><input type="file" id="input"></div>
+	<div><label>输出</label><output id="output" style="overflow-wrap: break-word;"></output></div>
+</form>
+<script type="text/javascript">
+var loadedFiles = [];
+var ensureLoaded = function (file, task) {
+	if (loadedFiles.indexOf(file)>=0) {
+		task();
+	} else {
+		var script = document.createElement("script");
+		script.src = file;
+		script.onload = function () {
+			loadedFiles.push(file);
+			task();
+		};
+		document.getElementsByTagName('head')[0].appendChild(script);
+	}
+}
+var hash = function (data, algorithm, length, callback) {
+	if (algorithm === "MD5") {
+		ensureLoaded("js/lib/md5.js", function () {
+			callback(md5(data));
+		});
+	} else {
+		ensureLoaded("js/lib/sha.js", function () {
+			var shaObj = new jsSHA(algorithm, "ARRAYBUFFER");
+			shaObj.update(data);
+			callback(shaObj.getHash("HEX",{shakeLen:length}));
+		});
+	}
+};
+var algorithmChooser = document.getElementById("algorithm");
+var lengthChooser=document.getElementById("length");
+var fileChooser = document.getElementById("input");
+var output = document.getElementById("output");
+var refresh = function () {
+	lengthChooser.disabled=!(algorithmChooser.value.startsWith("SHAKE"));
+	if (fileChooser.files.length > 0) {
+		var reader = new FileReader();
+		output.textContent = "请稍候";
+		reader.onload = function (e) {
+			hash(e.target.result, algorithmChooser.value,lengthChooser.value, function (sum) {
+				output.textContent = sum.toUpperCase();
+			});
+		};
+		reader.onerror = function (e) {
+			output.textContent = "读取文件失败";
+		};
+		reader.readAsArrayBuffer(fileChooser.files[0]);
+	}
+};
+fileChooser.onchange = refresh;
+algorithmChooser.onchange = refresh;
+lengthChooser.onchange = refresh;
+</script>
+</main>

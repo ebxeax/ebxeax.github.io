@@ -1,0 +1,16 @@
+Andriod开发历险记--第一天（也许是最后一天）
+由于之前已安装过Andriod Studio，也设了个AVD，倒没有什么困难。现在开始尝试用了，打开Andriod Studio创建一个项目，打算运行模板代码。
+
+第一个熟悉的噩梦出现了，找不到共享库libQt5Widgets.so.5，locate一下发现就在Andriod SDK自家的某个子目录中，于是在/usr/lib加个符号链接。再运行模拟器又发现缺其它共享库，如此下去几次觉得要改变策略，又改LD_LIBRARY_PATH。用了这个策略最后r600_dri.so明明已经加到库路径还是提示无法加载，网上搜了一下有人说把SDK目录下libstdc++干掉就好。唉，居然要有的库用系统的有的用google的才能运行，制造问题的库还放在那干嘛。心想Google都构建了如此宏大的软件体系了，却让我们自已在用ldd解决共享库依赖，太不友好了。再说，记得以前用老版SDK玩QQ时还没这个问题（有其它）。
+
+接着又一个熟悉的噩梦来了，在Andriod Studio再运行项目提示不够内存，构建APK更是把内存用光卡死只能重启。看来只能先关掉Andriod Studio用命令行构建和运行。这样IDE的价值就降低了，编辑、构建、运行要人工转换太烦了。2GB内存的机器真心不适合做Andriod开发了，只求我下次换电脑时google不要又发明什么创新型的bug或者又把内存需求翻倍。
+
+几经波折，到中午终于在模拟器上了看到了Hello World，可以去吃饭了。看一下历史记录，原来我一个上午已经输了接近一百五十条命令，差不多平均每分钟一条。对于我这种不常用命令的IDE用户，这还真不少了。
+
+以下是一些有用的命令：
+./gradlew assembleRelease
+export LD_LIBRARY_PATH=/home/kwong/Android/Sdk/tools/lib64/qt/lib:/home/kwong/Android/Sdk/tools/lib64
+./emulator64-x86 -avd Nexus_5X_API_19
+./adb uninstall com.github.chungkwong.pagetrack
+./adb -s emulator-5554 install /home/kwong/IdeaProjects/PageTrack/app/build/outputs/apk/app-release.apk
+./adb logcat

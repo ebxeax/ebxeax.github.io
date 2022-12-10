@@ -1,0 +1,25 @@
+相聚有时，后会无期-共同渡过九年，不能伴你一生
+
+同样在2007年，Sun打算开发Java FX来取代Swing，后来还宣布不再维护Swing。由于推广力度低和原来要求用FXML，Java FX很长时间被忽视，但Sun/Oracle一直在努力。这也符合Java的一贯审慎作风。
+
+定位为《Java核心技术》第9版与第10版的diff的《写给大忙人看的Java SE 8》大力推荐Java FX，但第10版又回到Swing去。也许，他也在犹疑。
+
+当我开始注意Java FX时，它已经相当成熟，无论对开发者还是用户体验均不错。
+
+Java FX相当容易上手，我发现我即使不看javadocs，由netbeans的基本模板开始，凭看自动补全已经可以打造不平凡的界面了，可见API比较合理。
+
+Java FX的界面比Swing好看多了，没有Swing那种粗糙的感觉。
+
+Java FX可以用CSS控制外观，虽然我可算是CSS盲，但总比重写Swing的LookAndFeel容易（如果netbeans像intelliJ那样支持内嵌模式就更好了，netbeans的JS/CSS支持都是一流的）。
+
+JavaFX的WebView不再重新造轮，用webkit做浏览器，效果比Swing的JEditorPane好太多了。媒体也基于久经考验的第三方库。ColorPicker也比JColorChooser友好一些。
+
+新增的图表组件虽然不太常用，但还是做得很细致的，修改数据时变化之流畅超乎我的想像。这进一步加大了我对Java FX的信心。
+
+Swing/AWT的主要功能在Java FX都有，而且更方便，图片、剪贴板等API比AWT中的自然多了。
+
+Java FX看起来没Swing那样MVC，但其实架构是完善的。Swing的重绘机制太折磨人了。
+
+当然，Swing比Java FX定制性强一些，在文本组件的模型Document就极为灵活，还好Swing和Java FX能互操作。
+
+Swing的一个好处是Java SE肯定自带，现在Java SE的windows版已经自带Java FX，Linux和Mac OS X下也有OpenJFX可用，所以Java FX的部署问题不大。

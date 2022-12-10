@@ -1,0 +1,195 @@
+---
+title: "备用输入法"
+layout: page
+navigatable: true
+---
+<style type="text/css">
+	textarea{
+		width: 100%;
+	}
+</style>
+
+<main>
+<div id="inputWidget">
+			<textarea id="area" placeholder="请在这里输入" autofocus></textarea>
+			<div id="tool">
+				<select id="methodChooser">
+					<option value="wubi">五笔</option>
+					<option value="cangjie">仓颉</option>
+					<option value="zhengma">郑码</option>
+					<option value="pinyin">全拼</option>
+					<option value="cantonhk">港拼</option>
+					<option value="english">英文</option>
+				</select>
+				<input id="codeInput" type="text" disabled>
+				<ol id="candidatesPane" start="0">
+				</ol>
+			</div>
+			<div id="help">
+				使用说明：
+				<ul>
+					<li>用空格输入候选0</li>
+					<li>用数字输入指定候选</li>
+					<li>用回车键输入字面的码</li>
+					<li>用PageUp和PageDown键翻页候选列表</li>
+					<li>用Ctrl-上下方向键改变输入法</li>
+				</ul>
+			</div>
+		</div>
+		<script>
+			var candidatesPerPage = 10;
+			var tables = {};
+			var page = [];
+			var currentPage = 0;
+			var ensureTableLoaded = function (tableFile, callback) {
+				if (tables.hasOwnProperty(tableFile)) {
+					callback(tables[tableFile]);
+				} else {
+					var request = new XMLHttpRequest();
+					request.onload = function (e) {
+						tables[tableFile] = request.responseText.split("\n");
+						callback(tables[tableFile]);
+					};
+					request.onerror = function (e) {
+						callback([]);
+					};
+					request.open("GET", tableFile);
+					request.responseType = "text";
+					request.send();
+				}
+			};
+			var searchTable = function (code, lines, start, end) {
+				var lower = 0;
+				var upper = lines.length - 1;
+				while (upper > lower) {
+					var mid = Math.floor((upper + lower) / 2);
+					if (lines[mid] < code) {
+						lower = mid + 1;
+					} else if (mid > 0 && lines[mid - 1] >= code) {
+						upper = mid - 1;
+					} else {
+						upper = lower = mid;
+					}
+				}
+				return lines.slice(Math.min(lower + start, lines.length), Math.min(lower + end, lines.length));
+			}
+			var createTableInputMethod = function (keys, keyNames, wildcard, tableFile) {
+				keyMap = {};
+				for (var i = 0; i < keys.length; i++) {
+					keyMap[keys.charAt(i)] = keyNames.charAt(i);
+				}
+				return {
+					"keyMap": keyMap,
+					"wildcard": wildcard,
+					"search": function (code, pageNumber, callback) {
+						ensureTableLoaded(tableFile, function (table) {
+							callback(searchTable(code, table, pageNumber * candidatesPerPage, (pageNumber + 1) * candidatesPerPage));
+						});
+					}
+				};
+			};
+			var inputMethods = {
+				wubi: createTableInputMethod("abcdefghijklmnopqrstuvwxy", "abcdefghijklmnopqrstuvwxy", "z", "data/wbx.txt"),
+				pinyin: createTableInputMethod("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz", "?", "data/pinyin.txt"),
+				cantonhk: createTableInputMethod("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz", "?", "data/cantonhk.txt"),
+				cangjie: createTableInputMethod("abcdefghijklmnopqrstuvwxyz", "日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜重", "?", "data/cangjie5.txt"),
+				zhengma: createTableInputMethod("abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz", "?", "data/zhengma.txt"),
+				english: createTableInputMethod("", "", "", null)
+			};
+			var getInputMethod = function () {
+				return inputMethods[methodChooser.value];
+			}
+			var encodeCandidate = function (line) {
+				var parts = line.split(" ");
+				var label = parts[1] + " ";
+				var method = getInputMethod();
+				for (var j = 0; j < parts[0].length; j++) {
+					label += method.keyMap[parts[0].charAt(j)];
+				}
+				return label;
+			}
+			var area = document.getElementById("area");
+			var candidatesPane = document.getElementById("candidatesPane");
+			var methodChooser = document.getElementById("methodChooser");
+			var codeInput = document.getElementById("codeInput");
+			var clearCandidates = function () {
+				page = [];
+				while (candidatesPane.hasChildNodes()) {
+					candidatesPane.removeChild(candidatesPane.lastChild);
+				}
+			}
+			var insertText = function (text) {
+				area.setRangeText(text, area.selectionStart, area.selectionEnd, "end");
+			}
+			var query = function () {
+				clearCandidates();
+				getInputMethod().search(codeInput.value, currentPage, function (data) {
+					page = data;
+					for (var i = 0; i < page.length; i++) {
+						var candidate = document.createElement("li");
+						candidate.textContent = encodeCandidate(page[i]);
+						candidatesPane.appendChild(candidate);
+					}
+				});
+			}
+			var choose = function (i, def) {
+				if (page.length > i) {
+					insertText(page[i].split(" ")[1]);
+					codeInput.value = "";
+				} else {
+					insertText(def);
+				}
+				clearCandidates();
+			};
+			var previousPage = function () {
+				if (currentPage > 0) {
+					--currentPage;
+					query();
+				}
+			};
+			var nextPage = function () {
+				if (page.length > 0) {
+					++currentPage;
+					query();
+				}
+			};
+			area.onkeypress = function (e) {
+				var processed = true;
+				if (e.ctrlKey && e.key === "ArrowUp") {
+					methodChooser.selectedIndex = (methodChooser.selectedIndex + methodChooser.length - 1) % methodChooser.length;
+					currentPage = 0;
+					query();
+				} else if (e.ctrlKey && e.key === "ArrowDown") {
+					methodChooser.selectedIndex = (methodChooser.selectedIndex + 1) % methodChooser.length;
+					currentPage = 0;
+					query();
+				} else if (e.code === "Backspace" && codeInput.value.length > 0) {
+					codeInput.value = codeInput.value.substring(0, codeInput.value.length - 1);
+					query();
+				} else if (e.code === "Space") {
+					choose(0, " ");
+					e.stopImmediatePropagation();
+					e.preventDefault();
+				} else if (e.code === "Enter") {
+					insertText(codeInput.value === "" ? "\n" : codeInput.value);
+					codeInput.value = "";
+				} else if (e.code === "PageUp") {
+					previousPage();
+				} else if (e.code === "PageDown") {
+					nextPage();
+				} else if ("0123456789".indexOf(e.key) !== -1) {
+					choose(e.key, e.key);
+				} else if (getInputMethod().keyMap.hasOwnProperty(e.key) || getInputMethod().wildcard === e.key) {
+					codeInput.value = codeInput.value + e.key;
+					currentPage = 0;
+					query();
+				} else {
+					processed = false;
+				}
+				if (processed) {
+					e.stopImmediatePropagation();
+					e.preventDefault();
+				}
+			};
+		</script>
+</main>

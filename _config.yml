@@ -1,0 +1,27 @@
+title: ebxeax
+description: ebxeax's blog
+lang: zh-CN
+author: ebxeax
+google_analytics: 
+show_downloads: false
+paginate: 20
+baseurl: ""
+permalink: none
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-toc
+
+markdown: kramdown
+exclude: ["README.md"]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      toc: true

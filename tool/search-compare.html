@@ -1,0 +1,101 @@
+---
+title: "综合搜索"
+layout: tool
+navigatable: true
+---
+<style type="text/css">
+  
+  html,body{
+    height: 100%;
+    margin:0px;
+  }
+  main{
+    position: fixed;
+    top:76px;
+    display: table;
+    width:100%;
+    height: calc(100% - 100px);
+  }
+  .header{
+    position: fixed;
+    line-height: auto;
+    width:100%;
+    top:0px;
+  }
+  footer{
+    position: fixed;
+    font-size: 16px;
+    line-height: 100%;
+    bottom: 0px;
+    padding: 0px;
+  }
+  article{
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+  }
+  iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+<div class="header">
+  <form id="form">
+    <input id="keyword" type="search" placeholder="关键词" autofocus>
+    <select id="first_provider"></select>
+    <select id="second_provider"></select>
+    <input type="submit" value="搜索">
+  </form>
+</div>
+<main>
+  <article><iframe id="first"></iframe></article>
+  <article><iframe id="second"></iframe></article>
+</main>
+<script type="text/javascript">
+  var provider={
+    "百度网页":"https://www.baidu.com/s?ie=utf-8&wd=",
+    "360网页":"https://www.so.com/s?ie=utf-8&q=",
+    "搜狗网页":"https://www.sogou.com/web?query=",
+    "必应网页":"https://www.bing.com/search?q=",
+    "雅虎网页":"https://search.yahoo.com/search?p=",
+    "Gigablast网页":"https://www.gigablast.com/search?c=main&qlangcountry=xx-zz&q=",
+    "百度词典":"https://dict.baidu.com/s?wd=",
+    "百度地图":"https://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3D",
+    "百度图片":"https://image.baidu.com/search/index?tn=baiduimage&ie=utf-8&word=",
+    "百度视频":"http://v.baidu.com/v?ie=utf-8&word=",
+    "虾米音乐":"http://www.xiami.com/search?key=",
+    "百度新闻":"http://news.baidu.com/ns?tn=news&word=",
+    "百度百科":"https://baike.baidu.com/search?enc=utf8&word=",
+    "百度知道":"https://zhidao.baidu.com/search?ie=utf-8&word=",
+    "百度学术":"http://xueshu.baidu.com/s?ie=utf-8&wd=",
+    "IEEE":"http://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=",
+    "百度文库":"https://wenku.baidu.com/search?ie=utf-8&word=",
+    "百度贴吧":"http://tieba.baidu.com/f/search/res?ie=utf-8&qw=",
+    "天涯":"https://search.tianya.cn/bbs?q=",
+    "淘宝":"https://s.taobao.com/search?ie=utf8&q=",
+    "京东":"https://search.jd.com/Search?enc=utf-8&keyword="
+  };
+  document.getElementById("form").onsubmit=function(){
+    var keyword=encodeURIComponent(document.getElementById("keyword").value);
+    document.getElementById("first").src=document.getElementById("first_provider").value+keyword;
+    document.getElementById("second").src=document.getElementById("second_provider").value+keyword;
+    return false;
+  }
+  var list1=document.getElementById("first_provider");
+  for(key in provider){
+    var option=document.createElement("option");
+    option.value=provider[key];
+    option.appendChild(document.createTextNode(key));
+    list1.appendChild(option);
+  }
+  list1.selectedIndex=0;
+  var list2=document.getElementById("second_provider");
+  for(key in provider) {
+    var option=document.createElement("option");
+    option.value=provider[key];
+    option.appendChild(document.createTextNode(key));
+    list2.appendChild(option);
+    list2.selectedIndex=1;
+  }
+</script>

@@ -1,0 +1,77 @@
+---
+---
+
+@import 'jekyll-theme-architect';
+
+.tag{
+  background-color: orange;
+}
+.enter{
+  text-align: right;
+}
+td,th{
+  text-align: left;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+blockquote {
+  padding: 0 0 0 0px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-left:0px;
+}
+
+header {
+  background: #cc297a url(../images/header-bg.jpg) 0 0 repeat-x;
+}
+
+#main-content video {
+  max-width: 100%;
+}
+::cue {
+  background-color: rgba(255, 255, 255, 0.0);
+  color: black;
+}
+#site-title{
+  width: 540px;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-size: 72px;
+  font-weight: normal;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: -1px;
+}
+#site-author{
+  width: 540px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #9ddcff;
+  letter-spacing: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+#site-title{
+  font-size: 60px;
+    width: 340px;
+}
+#site-author{
+  font-size: 30px;
+    width: 340px;
+}
+}
+@media only screen and (max-width: 767px) {
+#site-title{
+  font-size: 48px;
+  width: 100%;
+}
+#site-author{
+  font-size: 24px;
+  width: 100%;
+}
+}

@@ -1,0 +1,57 @@
+---
+title: "异步画布"
+layout: tool
+navigatable: false
+---
+<main>
+	<canvas style="touch-action: none;" id="canvas" ></canvas>
+	<br>
+	请在上方绘画(<span id="version"></span>)
+	<button onclick="clear_canvas()">清空</button>
+<script type="text/javascript">
+	document.getElementById("version").textContent=navigator.userAgent
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext("2d", {desynchronized: true, alpha: false});
+
+	const getPoint=function(e) {
+		const rect = canvas.getBoundingClientRect();
+		return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+	}
+
+	let point;
+	canvas.addEventListener("pointerdown", (e) => {
+		point = getPoint(e);
+	});
+	canvas.addEventListener("pointermove", (e) => {
+		if (!point)
+			return;
+		const events = e.getCoalescedEvents();
+		events.forEach((e) => {
+			const new_point = getPoint(e);
+			ctx.beginPath();
+			ctx.moveTo(point.x, point.y);
+			ctx.lineTo(new_point.x, new_point.y);
+			ctx.stroke();
+			point = new_point;
+		});
+	});
+	canvas.addEventListener("pointerup", (e) => {
+		point = null;
+	});
+	const angle = screen.orientation.angle % 360;
+	width = window.innerWidth * 0.9;
+	height = window.innerHeight * 0.8;
+	if (angle % 180 == 90) {
+		canvas.width = height;
+		canvas.height = width;
+	} else {
+		canvas.width = width;
+		canvas.height = height;
+	}
+	function clear_canvas() {
+		ctx.fillStyle = 'white';
+		ctx.fillRect(0, 0, width, height);
+	}
+	clear_canvas();
+</script>
+</main>

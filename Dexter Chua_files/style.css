@@ -1,0 +1,84 @@
+article, aside, footer, header, hgroup, nav, section, main {
+    display:block;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+header {
+    font-weight: normal;
+    font-size: 2.5em;
+    font-family: "Lora", serif;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.3em;
+    margin-top: 0.8em;
+}
+pre {
+    overflow-x: auto;
+}
+main, footer {
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+h1, h2, h3 {
+    font-weight: normal;
+    font-family: "Marcellus SC", sans-serif;
+    margin-bottom: 0.2em;
+    margin-top: 0.8em;
+    color: #a81010;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1em;
+}
+p {
+    margin-top: 0.5em;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+div.display-eq {
+  text-align: center;
+  font-style: italic;
+}
+div.display-eq span.text {
+  font-style: normal;
+}
+
+canvas.box {
+  border: solid 2px black;
+  border-radius: 3px;
+}
+pre code {
+  margin-left: 2em;
+}
+ul li {
+  margin: 7px 0;
+}
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 2em;
+    }
+}
+.katex {
+    font-size: 1.1em !important;
+}

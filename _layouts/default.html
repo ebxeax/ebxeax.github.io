@@ -1,0 +1,45 @@
+---
+layout: decoration
+---
+    <header>
+      <div class="inner">
+        <a href="{{ '/' | absolute_url }}">
+          <div id="site-title">{{ site.title | default: site.github.repository_name }}</div>
+        </a>
+        <div id="site-author">{{ site.description | default: site.github.project_tagline }}</div>
+        <a href="https://github.com/ebxeax" class="button"><small>关注我的</small> GitHub</a>
+        <!--
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=6033826529000162498' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+        -->
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          {{ content }}
+        </section>
+
+        <aside id="sidebar">
+          {% if site.show_downloads %}
+            <a href="{{ site.github.zip_url }}" class="button">
+              <small>Download</small>
+              .zip file
+            </a>
+            <a href="{{ site.github.tar_url }}" class="button">
+              <small>Download</small>
+              .tar.gz file
+            </a>
+          {% endif %}
+
+          {% if site.github.is_project_page %}
+            <p class="repo-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> 的维护者为 <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</p>
+          {% endif %}
+          {% capture my_sidebar %}{% include sidebar.md %}{% endcapture %}
+          {{ my_sidebar | markdownify }}
+        </aside>
+      </div>
+    </div>
+    <footer>
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="{{ '/image/cc.png' | relative_url }}" /></a><br><a href="https://www.chungkwong.cc/">ebxeax's blog</a>采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
+    </footer>

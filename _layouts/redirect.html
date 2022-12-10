@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <meta charset="utf-8">
+  <title>正在跳转到新地址</title>
+  <link rel="canonical" href="{{ page.redirect.to }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+  <meta name="robots" content="noindex">
+  <h1>正在跳转到新地址</h1>
+  由于网站改版，页面的地址格式发生了变更。不过，你不用担心，你仍然能看到你要看的内容，我们马上会把你带到新的地址，没有跳转的话请点击<a href="{{ page.redirect.to }}">{{page.title}}</a>。
+  <script>location="{{ page.redirect.to }}"</script>
+</html>

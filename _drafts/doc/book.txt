@@ -1,0 +1,157 @@
+====== 书评 ======
+
+===== 具体 =====
+
+|书^状态^推荐程度^评价|
+|计算机程序的构造和解释 = Structure and Interpretation of Computer Programs / (美) Harold Abelson, Gerald Jay, Julie Sussman|读完|必读|程序设计首选教材没有之一，低起点但深刻而全面|
+|C程序设计语言 = The C Programming Language / (美) Brian W.Kernighan , Dennis M.Ritchie|读完|需要时必读|C最经典的教材和手册，简明扼要|
+|C专家编程 = Expert C programming / (美) Peter Van Der Linden|读完|需要时值得一读|虽然我不支持这样抓细节，但轻松一下有点意思|
+|C和指针 = Pointers on C / (美) Kenneth A. Reek|大致读过|需要时值得一读|覆盖C99的教材，及早引入指针可避免混乱|
+|嗨翻C语言 / (美) David Griffiths, Dawn Griffiths|读完|需要时值得一读|选材不错的入门书，但单读这本书显然不够|
+|程序设计实践 = The Practice of Programming / Brian W. Kernighan, Rob Pike|读完|值得一读|涉及优秀程序设计的各方面|
+|代码质量 = Code quality : the open source perspective / (希) Diomidis Spinellis|读完|需要时值得一读|列出了各类常见错误|
+|代码阅读方法与实践 / (希腊) Diomidis Spinellis|大致读过|需要时可以一读|太多大白话|
+|C语言参考手册 = C : a reference manual / (美) Samuel P. Harbison Ⅲ, Guy L. Steele Jr.|大致读过|需要时可以一读|正常人通常不要这个详细程度|
+|C++程序设计语言 = The C++ programming language / (美) Bjarne Stroustrup|读完|需要时值得一读|C++最权威和全面的参考，作了大量辩解|
+|C++程序设计原理与实践 = Programming principles and practice using C++ / (美) Bjarne Stroustrup著|大致读过|需要时值得一读|C++建议教材|
+|C++ Primer中文版 / Stanley B. Lippman, Josée Lajoie, Barbara E. Moo|读完|需要时可以一读|另一C++权威书籍，但过于陷入细节|
+|Java核心技术 = Core java  / (美) Cay S. Horstmann, Gary Cornell |读完|需要时值得一读|Java语言建议教材，选材很恰当，比较全面和实用|
+|Java程序设计语言 = The Java programming language / (美) Ken Arnold, James Gosling, David Holmes|读完 |需要时值得一读|对java语言及其设计考虑作了精僻的说明，但似乎java5后没再更新|
+|Java技术手册 = Java in a Nutsbell / (英) Benjamin J. Evans, (美) David Flanagan|读完|需要时值得一读|可作java语言的语法快速参考|
+|Effective Java中文版 = Effective Java / (美) Joshua Bloch|读完 |需要时值得一读|列出一些常见错误和有用建议|
+|Java Pitfalls中文版 / (美) Michael C. Daconta ... |大致读过|需要时值得一读|列出一些常见错误|
+|Java编程思想 = Thinking in Java / (美) Bruce Eckel|基本未读|需要时可以一读|有点名过其实|
+|写给大忙人看的Java SE 8 = Java SE 8 for the really impatient / (美) Cay S. Horstmann|读完|需要时值得一读|对了老Java程序员了解java8很有用|
+|Java语言规范 : 基于Java SE 8 = The Java language specification : Java SE 8 edition / James Gosling|部公读过|需要时值得一读|Java最权威的参考|
+|Java 8函数式编程 = Java 8 lambdas functional programming for the masses / (英) Richard Warburton|读完|需要时可以一读|没见过lambda表达式的就看一下|
+|Java语言精粹 = Java : the good parts / Jim Waldo|读完|需要时可以一读|对Java的优劣有所评价|
+|透视Java : 反编译、修补和逆向工程技术 / (乌克兰) Alex Kalinovsky|读完|需要时值得一读|同类书籍很罕见，但必要时用得着|
+|Java Swing / Marc Loy ... |大致看过|需要时可以一读|还是看javadocs比较好|
+|NetBeans富客户端编程权威教程 = Rich client programming : plugging into the NetBeans platform / (美) Tim Boudreau, Jaroslav Tulach, Geertjan Wielenga|大致读过|需要时可以一读|还是看官方文档比较好|
+|设计模式Java手册 = Design patterns Java workbook / (美) Steven John Metsker|大致看过|需要时可以一读|有经验应已自己发现其中内容，但无经验者可以看一下|
+|实现模式 = Implementation patterns / (美) Kent Beck|大致看过|可以一读|有经验应已自己发现其中内容|
+|JAVA开发超级工具集 = Java power tools / John Ferguson Smart|大致读过|需要时可以一读|应该知道其中介绍各类工具，但具体例子可能已过时|
+|OSGi实战 = OSGi in action: creating modular applications in Java / (美) Richard S. Hall ... |基本未读|需要时可以一读|大概了解下模块化就好，具体做时参考最新文档|
+|Scala编程 = Programming in Scala / Martin Odersky, Lex Spoon, Bill Venners|读完|需要时值得一读|即使不用也可开阔眼界（如actor）使你成为更好的Java程序员|
+|Clojure程序设计 = Programming Clojure / (美) Stuart Halloway, Aaron Bedra |大致读过|需要时可以一读|即使不用也可开阔眼界（如STM）使你成为更好的Java程序员|
+|JavaScript权威指南 = JavaScript : the definitive guide / David Flanagan|部分读过|需要时值得一读|JS很好的参考书|
+|JavaScript面向对象精要 = The principles of Object-Oriented JavaScript / (美) Nicholas C. Zakas|读完|需要时值得一读|JS很短的入门书|
+|HTML 5应用开发实践指南 = Programming HTML 5 applications / Zacbary Kessin|读完|需要时值得一读|JS很短的入门书|
+|Python袖珍指南 / Mark Lutz|读完|需要时值得一读|快速参考|
+|Python学习手册 = Learning Python / Mark Lutz|部分读过|需要时可以一读|过于偏重语法|
+|像计算机科学家一样思考Python / (美) Allen B. Downey|读完|需要时可以一读|简短但太不专业|
+|可爱的Python / 哲思社区|部分读过|需要时值得一读|作为入门书组织得不错|
+|Perl语言编程 = Programming Perl / (美) Larry Wall, Tom Christiansen, Jon Orwant|基本未读|需要时值得一读|Perl语言的经典|
+|Tcl/Tk入门经典 = Tcl and the Tk toolkit / (美) John K. Ousterhout, Ken Jones|部分读过|需要时可以一读|Tcl罕见的书|
+|Haskell函数式程序设计 / Richard Bird|读完|需要时可以一读|过于自我陶醉|
+|XML手册 = XML handbook / (美) Charles F. Goldfarb, Paul Prescod|部分读过|需要时可以一读|应用易过时|
+|The TeXbook / Donald E. Knuth|大致读过|需要时值得一读|关于TeX的经典|
+|MATHEMATICA全书 = Mathematica book / (美) 斯蒂芬·沃尔夫雷姆著|大致读过|需要时值得一读|介绍了其设计|
+|七周七语言 : 理解多种编程范型 = Seven languages in seven weeks : a pragmatic guide to learning programming language / (美) Bruce A. Tate|读完|值得一读|思想的碰撞可以防止偏见|
+|代码的未来 / (日) 松本行弘|读完|可以一读|信不信由你|
+|编程之魂 : 与27位编程语言创始人对话 = Masterminds of programming : conversations with the creators of major programming languages / (美) Federico Biancuzzi, Shane Warden|读完|可以一读|有少数值得注意的观点|
+|人月神话 = Mythical man-month / (美) 小弗雷德里克·布鲁克斯著|读完 |必读|软件工程开山之作，充满洞见|
+|软件工艺 = Software craftsmanship / (美) Pete McBreen|读完|值得一读|提倡学徒制|
+|黑客与画家 = Hackers and painters : big ideas from the computer age / (美) Paul Graham |读完 |值得一读|有不少看法，不限于IT|
+|代码大全 = Code complete / (美) Steve McConnell|读完 |可以一读|大部分为常识|
+|程序员修炼之道 : 从小工到专家 = The pragmatic programmer : from journeyman to master / (美) Andrew Hunt, David Thomas|读完|值得一读|一本启蒙读物|
+|梦断代码 = Dreaming in code / (美) Scott Rosenberg|读完|可以一读|又一失败项目的传记|
+|完美软件 : 对软件测试的各种幻想 = Perfect software : and other illusions about testing / (美) Gerald M. Weinberg|部分读过|值得一读|经常被遗忘的常识|
+|程序开发心理学 = The psychology of computer programming / (美) Gerald M. Weinberg|大致读过|可以一读|有点过时|
+|人件集 : 人性化的软件开发 = The peopleware papers : notes on the human side of software / (澳) Larry L. Constantine|读完 |可以一读|欠说服力|
+|编程之道 = The tao of programming / (美)杰弗雷·詹姆斯著|读完|可以一读|比较特别|
+|软件之道 : 软件开发争议问题剖析 = Making software : what really works, and why we believe it / (美) Andy Oram, Greg Wilson|部分读过|可以一读|不一定认同各文观点但可参考|
+|软件系统架构 : 使用视点和视角与利益相关者合作 = Software systems architecture : working with stakeholders using viewpoints and perspectives / (英) Nick Rozanski, Eoin Woods|读完|可以一读|可作检查清单用|
+|重构 : 改善既有代码的设计 = Refactoring : improving the design of existing code / (美) Martin Fowler|大致读过|可以一读|很骑墙|
+|UML用户指南 = Unified modeling language user guide / (美) Grady Booch, James Rumbaugh, Ivar Jacobson|大致读过|需要时值得一读|了解一下就好|
+|设计原本 = Design of design : essays from a computer scientist / (美) Frederick P. Brooks|读完|可以一读|有一点想法|
+|设计模式 : 可复用面向对象软件的基础 / Erich Gamma ...|大致读过|可以一读|有经验应已自己发现其中内容然后发现很催眠，但无经验者可以看一下|
+|Design by Contract原则与实践 / Richard Mitchell, Jim Mckim|大致读过|可以一读|有一点想法，但大部分是废话|
+|反模式 : 危机中软件、架构和项目的重构 = AntiPatterns : refactoring software, architectures, and projects in crisis / (美) William J. Brown ... |大致读过|需要时可以一读|了解一下就好|
+|编写可读代码的艺术 / Dustin Boswell, Trevor Foucher|读完|可以一读|基本但经常被遗忘的技巧|
+|修改代码的艺术 = Working effectively with legacy code / (美) Michael C. Feathers|大致读过|需要时可以一读|有一点想法|
+|代码整洁之道=Clean Code|大致读过|需要时值得一读|小技巧别的地方很少提|
+|程序员思维修炼 = Pragmatic thinking and learning: refactor your wetware / (美) Andy Hunt|读完|值得一读|对学习的看法有点建设性|
+|卓越程序员密码 = The developer’s code : what real programmers do / (美) Ka Wai Cheung|读完|可以一读|经验之谈|
+|程序员应该知道的97件事 = 97 things every programmer should know : collective wisdom from the experts / Kevlin Henney|读完|可以一读|没太多新意|
+|卓有成效的程序员 = The productive programmer / Neal Ford著|读完|可以一读|没太多新意|
+|Java程序员，上班那点事儿 / 钟声|读完|可以一读|例子可能过时，但选材不错|
+|Java程序员职场全攻略 : 从小工到专家 / 吴亚峰|读完|可以一读|例子可能过时，但选材不错|
+|人本界面 : 交互式系统设计 = The Humane Interface : New Directions for Designing Interactive Systems / (美) Jef Raskin|读完|需要时值得一读|提了一些应该注意的地方|
+|程序员修炼之道 : 专业程序员必知的33个技巧 = New programmer’s survival manual : navigate your workplace, cube farm, or startup / (美) Josh Carter|读完|值得一读|一本向导|
+|可用性工程 = Usability engineering / (美) Jakob Nielsen|大致读过|需要时可以一读|一些注意事项|
+|软件观念革命 : 交互设计精髓 = About face 2.0 : the essentials of interaction design / (美) Alan Cooper, Robert Reimann著|读完|需要时可以一读|理论虚，预测不准，不过有些实用提示|
+|GUI设计禁忌 : 程序员和网页设计师界面设计必读 = GUI bloopers : don’ts and do’s for software developers and web designers / (美) Jeff Johnson|大致读过|需要时值得一读|可以避免很多问题|
+|简约至上 : 交互式设计四策略 / (英) Giles Colborne|读完|可以一读|想法很少|
+|简约之美 : 软件设计之道 = Code simplicity : the science of software development / (美) Max Kanat-Alexander|读完|可以一读|了解一下就好|
+|视觉可用性 : 数字产品设计的原理与实践 = Visual usability : principles and practices for designing digital / (美) Tania Schlatter, Deborah Levinson|大致读过|例子可以过一下|
+|数据可视化之美 = Beautiful visualization / Julie Steele, Noah Iliinsky|读完|可以一读|给了一些例子，不见得可用于其它地方|
+|应用程序性能测试的艺术 / Ian Molyneaux|读完|需要时可以一读|有点例子可参考|
+|软件调试修炼之道 = Debug it! : find, repair, and prevent bugs in your code / (美) Paul Butcher|读完|需要时可以一读|主要对C/C++程序员有用|
+|零缺陷程序设计 = Toward zero-Defect programming / (美) Allan M.Stavely|读完|需要时可以一读|没什么用|
+|软件可靠性方法 = Software reliability methods / (以) Doron A. Peled|大致读过|需要时可以一读|不太实用|
+|高阶逻辑辅助证明系统 / (德) 托比亚斯·尼普科夫, (英) 劳伦斯·鲍尔森, (德) 玛尔库斯·温泽尔著|大致读过|需要时可以一读|
+|语义网基础教程 = A semantic web primer / (希) Grigoris Antoniou ...|读过|需要时可以一读|理想与现实差距太大了|
+|数据挖掘 : 概念与技术 = Data mining : concepts and techniques / Jiawei Han, Micheline Kamber, Jian Pei|读完|需要时可以一读|把简单的写玄|
+|Git版本控制管理 = Version control with Git / Jon Loeliger, Matthew McCullough|部分读过|需要时可以一读|可以用来查|
+|版本控制之道, 使用Subversion = Pragmatic version control, using subversion / (美) Mike Mason|部分读过|需要时可以一读|可以用来查|
+|设计心理学. 1, 日常的设计 / (美) 唐纳德·A·诺曼著 = The design of everyday things / Donald Arthur Norman|部分读过|值得一读|有关可用性一针见血，例子令人感同身受|
+|编程卓越之道 = Write Great Code / (美) Randall Hyde|读完|值得一读|讨论硬件对编码的影响|
+|深入理解计算机系统 = Computer systems : a programmer’s perspective / (美) Randal E. Bryant, David R. O’Hallaron|大致读过|可以一读|名过其实|
+|编码的奥秘 = Code / (美) Charles Petzold|读完|值得一读|动手做CPU是好的|
+|研究之美 = Surreal numbers / (美) D. E. Knuth|读完|可以一读|讨厌骗人的爱情小说，但有的插话有点想法|
+|世界是数字的 = D is for digital / (美) Brian W. Kernighan|读完|值得一读|公选教材|
+|哥德尔、艾舍尔、巴赫 : 集异璧之大成 / [美] 侯士达著|读完|值得一读|一部探讨计算机的文学巨著|
+|计算机科学导论 = Foundations of computer science / Behrouz, Forouzan|读完|值得一读|能提供整个计算机领域的基本常识，但错误不少|
+|计算机系统 : 系统架构与操作系统的高度集成 Computer systems : an integrated approach to architecture and operating systems / Umakishore Ramachandran, William D. Leahy Jr. |读完|值得一读|硬件工程师在默默地做实事，他们的工作值得回味|
+|现代操作系统 = Modern operating systems / (荷) Andrew S. Tanenbaum|读完|值得一读|清晰地介绍了操作系统及其设计|
+|操作系统概念 = Operating system concepts / (美) Abraham Silberschatz, Peter Baer Galvin, Greg Gagne|读完|需要时可以一读|坦白地说没写清楚|
+|计算机的心智 : 操作系统之哲学原理 = Computer’s mind : philosophical principles of operating systems / 邹恒明|读完|需要时可以一读|通俗地介绍了一些基本概念|
+|Orange’S : 一个操作系统的实现 / 于渊著|部分读过|需要时可以一读|正常人通常不会从头开始做操作系统|
+|UNIX编程艺术 = The art of UNIX programming / (美) Eric S. Raymond|读完|值得一读|介绍了有效地使用计算机的各方面，不限于UNIX|
+|Linux命令、编辑器与Shell编程 = Practical guide to Linux commands, editors, and Shell programming / (美) Mark G.Sobell著 ; 杨明军, 王凤芹译|大致读过|需要时可以一读|可以用来查|
+|Linux就是这个范儿 / 赵鑫磊, (加) Jie Zhang (张洁)|部分读过|需要时值得一读|Linux书中算比较友好实在，但有些错误|
+|学习正则表达式 = Introducing regular expressions / (美) Michael Fitzgerald|读完|需要时可以一读|正则表达式入门|
+|程序设计语言概念 = Concepts in programming languages / John C. Mitchell|未读|值得一读|比较深入地评论了各种语言|
+|程序设计语言原理 = Concepts of programming languages / (美) Robert W. Sebesta|读完|需要时可以一读|可以了解各种语言，有助学习新语言|
+|程序设计语言 = Programming language pragmatics : 实践之路 / (美) Michael L. Scott|读完|需要时值得一读|谈到一些与其它范畴的联系|
+|程序设计语言 : 原理与实践 = Programming languages : principles and practice / (美) Kenneth C. Louden|读完|需要时可以一读|例子有点奇怪|
+|类型和程序设计语言 = Types and programming languages / (美) Benjamin C. Pierce|部分读过|需要时可以一读|基本部分还是知道一下|
+|编译原理 = Compilers : principles, techniques and tools / (美) Alfred V. Aho ... |读完|值得一读|龙书是标准教材和参考书|
+|现代编译原理 : C语言描述 = Modern compiler implementation in C / (美) Andrew W. Appel, Maia Ginsburg|大致读过|值得一读|虎书鼓励实际构建编译器，选材也较全面，另有Java和ML版|
+|数据库系统概念 =Database system concepts / Abraham Silberschatz, Henry F. Korth, S. Sudarshan|读完|需要时可以一读|各方面都有介绍|
+|NoSQL精粹 = NoSQL distilled : a brief guide to the emerging world of polyglot persistence / (美) Pramod J. Sadalage, Martin Fowler|大致读过|需要时可以一读|可以看到关系数据库外的世界|
+|计算机网络(第5版) / Andrew S. Tanenbaum, Davi J. Wetherall|部分读过|值得一读|全面详尽的参考书| 
+|计算机网络 : 一种开源的设计实现方法 = Computer networks : an open source approach / Ying-Dar Lin, Ren-Hung Hwang, (美) Fred Baker |读完|需要时值得一读|很详细和实用|
+|自动机理论、语言和计算导论 = Introduction to automata theory, languages, and computation / (美) John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman|读完|值得一读|比较好读，讲罕有的好数学|
+|计算理论导引 = Introduction to the theory of computation / Michael Sipser|读完|可以一读|简短但较少应用|
+|可计算性与数理逻辑 = Computalibity and logic / (美) George S.Boolos, John P.Burgess, Richard C.Jeffrey|部分读过|需要时可以一读|什么都提一下|
+|可计算函数 / A. Shen, N. K. Vereshchagin|大致读过|需要时可以一读|简短直入正题给有意义结论|
+|算法导论 = Introduction to algorithms / (美) Thomas H. Cormen ... 读完|可以一读|典型食谱，不要太在意证明就好|
+|编程珠玑 = Programming pearls / (美) Jon Bentley|读完|值得一读|介绍编写高效程序的有用技巧|
+|计算机程序设计艺术 = The art of computer programming / (美) Donald E. Knuth|基本未读|需要时可以一读|经典但大概只能用来查|
+|Hacker’s Delight / Henry S.Warren, Jr.|基本未读|需要时可以一读|各种神奇的二进制技巧，最好不要用|
+|Numerical recipes : the art of scientific computing / William H. Press ... |基本未读|需要时可以一读|数值算法食谱|
+|并行算法导论 = Introduction to parallel algorithms / (印) C.Xavier, (美) S.S.Iyengar|部分读过|需要时可以一读|太简单|
+|计算机视觉 = Computer vision / (美) Linda G. Shapiro, George C. Stockman|部分读过|需要时可以一读|
+|图像处理、分析与机器视觉 = Image processing, analysis, and machine vision / Milan Sonka, Vaclav Hlavac, Roger Boyle|部分读过|需要时可以一读|
+|数字图像处理 : Java语言算法描述 = Digital Image Processing : an algorithmic introduction using Java / Wilhelm Burger, Mark J. Burge|部分读过|需要时可以一读|
+|图像处理与计算机视觉算法及应用 = Algorithms for image processing and computer vision / (加拿大) J. R. Parker|部分读过|需要时值得一读|
+|黑客大曝光 / Stuart McClure, Joel Scambray, George Kurtz|部分读过|值得一读|相当全|
+|黑客攻击与防御 / Stuart McClure, Saumil Shah, Shreeraj Shah|大致读过|需要时值得一读|比较易读|
+|计算机安全基础 / Chuck Easttom |读完|值得一读|简单介绍了对普通用户都应知道的东西|
+|计算机安全导论 / (美) Michael T. Goodrich, Roberto Tamassia|读完|需要时可以一读|各方面都说一点|
+|信息安全工程 = Security engineering : a guide to building dependable distributed systems / (英) Ross Anderson|读完|需要时值得一读|很多案例|
+|安全的神话 = The myths of security / John Viega|读完|需要时值得一读|有不少很实际的观点|
+
+===== 一般 =====
+
+
+==== 黑名单 ====
+
+识别泛滥中的垃圾书籍的若干技巧
+
+  * 所有作者均为教授的书和以高校教材为定位的书大部分为垃圾，因为写的人和预期读者都没打算弄懂
+  * 好书的书名不用加无谓的修饰，只有垃圾书籍会有这样的书名:xx天/xx小时学会yyy,zzz从入门到精通,www宝典/经典,ttt详解/精解
+如果两本书章节结构很接近，至少一本为垃圾，很可能两本都是，抄来抄去会越来越不得要领
+  * 没有出现笑话或讽刺的书大概为垃圾，一本正经说明作者不知道自己在写什么

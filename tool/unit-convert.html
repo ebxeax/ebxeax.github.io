@@ -1,0 +1,128 @@
+---
+title: "单位换算"
+layout: page
+navigatable: true
+---
+
+<main>
+<div id="length">
+			<h2>长度</h2>
+		</div>
+		<div id="area">
+			<h2>面积</h2>
+		</div>
+		<div id="volumn">
+			<h2>体积</h2>
+		</div>
+		<div id="mass">
+			<h2>质量</h2>
+		</div>
+		<div id="temperature">
+			<h2>温度</h2>
+		</div>
+		<div id="pressure">
+			<h2>压力</h2>
+		</div>
+		<div id="power">
+			<h2>功率</h2>
+		</div>
+		<div id="energy">
+			<h2>功/能/热</h2>
+		</div>
+		<div id="density">
+			<h2>密度</h2>
+		</div>
+		<div id="force">
+			<h2>力</h2>
+		</div>
+		<div id="time">
+			<h2>时间</h2>
+		</div>
+		<div id="speed">
+			<h2>速度</h2>
+		</div>
+		<div id="angle">
+			<h2>角度</h2>
+		</div>
+		<div id="storage">
+			<h2>数据空间</h2>
+		</div>
+		<script>
+var convertWidget = function (selector, units) {
+	var widget = document.querySelector(selector);
+	var controls = [];
+	var changing = false;
+	for (var unit in units) {
+		var control = document.createElement("input");
+		control.type = "number";
+		control.step = "any";
+		control.value = 0;
+		control.unitValue = units[unit];
+		control.oninput = function (e) {
+			if (!changing) {
+				changing = true;
+				var refValue = e.target.value * e.target.unitValue;
+				for (var c in controls) {
+					if (controls[c] !== e.target) {
+						controls[c].value = refValue / controls[c].unitValue;
+					}
+				}
+				changing = false;
+			}
+		};
+		widget.appendChild(control);
+		var label = document.createElement("label");
+		label.textContent = unit;
+		widget.appendChild(label);
+		widget.appendChild(document.createElement("br"));
+		controls.push(control);
+	}
+};
+var affineConvertWidget = function (selector, units) {
+	var widget = document.querySelector(selector);
+	var controls = [];
+	var changing = false;
+	for (var unit in units) {
+		var control = document.createElement("input");
+		control.type = "number";
+		control.step = "any";
+		control.value = 0;
+		control.unitValue = units[unit][0];
+		control.offsetValue = units[unit][1];
+		control.oninput = function (e) {
+			if (!changing) {
+				changing = true;
+				var refValue = (e.target.value - e.target.offsetValue) / e.target.unitValue;
+				for (var c in controls) {
+					if (controls[c] !== e.target) {
+						controls[c].value = refValue * controls[c].unitValue + controls[c].offsetValue;
+					}
+				}
+				changing = false;
+			}
+		};
+		widget.appendChild(control);
+		var label = document.createElement("label");
+		label.textContent = unit;
+		widget.appendChild(label);
+		widget.appendChild(document.createElement("br"));
+		controls.push(control);
+	}
+};
+			convertWidget("#length", {"千米(km)": 1000, "米(m)": 1, "分米(dm)": 0.1, "厘米(cm)": 0.01, "毫米(mm)": 0.001, "微米(μm)": 1e-6, "纳米(nm)": 1e-9, "皮米(pm)": 1e-12, "光年(ly)": 9460730472580800, "天文单位(AU)": 149597870700, "英寸(in)": 0.0254, "英尺(ft)": 0.3048, "码(yd)": 0.9144, "英里(mi)": 1609.344, "海里(nmi)": 1852, "英寻(fm)": 1.8288, "弗隆(fur)": 201.168, "里": 500, "丈": 10.0 / 3, "尺": 1.0 / 3, "寸": 0.1 / 3, "分": 0.01 / 3, "厘": 0.001 / 3, "毫": 0.0001 / 3});
+			convertWidget("#area", {"平方千米(km²)": 1e6, "公顷(ha)": 1e4, "公亩(are)": 100, "平方米(㎡)": 1, "平方分米(dm²)": 0.01, "平方厘米(cm²)": 1e-4, "平方毫米(mm²)": 1e-6, "英亩(acre)": 4046.8564224, "平方英里(sq.mi)": 2589988.110336, "平方码(sq.yd)": 0.8361274, "平方英尺(sq.ft)": 0.092903, "平方英寸(sq.in)": 0.00064516, "平方竿(sq.rd)": 25.2928526, "顷": 1e5 * 2 / 3, "亩": 1e3 * 2 / 3, "分": 1e2 * 2 / 3, "平方寸": 0.01 / 9});
+			convertWidget("#volumn", {"立方米(m³)":1, "立方分米(dm³)或升(l)":1e-3, "立方厘米(cm³)或毫升(ml)":1e-6, "立方毫米(mm³)或微升(ul)":1e-9, "分升(dl)":1e-4, "厘升(cl)":1e-5, "公石(hl)":0.1, "立方英尺(cu ft)":0.0283168, "立方英寸(cu in)":0.00001638704, "立方码(cu yd)":0.7645536, "亩英尺":1233.4818375, "英制加仑(uk gal)":0.00454609188, "美制加仑(us gal)":0.00378541178, "英制液体盎司(oz)":0.00002841, "美制液体盎司(oz)": 0.00002957});
+			convertWidget("#mass", {"千克(kg)":1e3, "克(g)":1, "毫克(mg)":1e-3, "微克(μg)":1e-6, "吨(t)":1e6, "公担(q)":1e5, "克拉(ct)":0.2, "分(point)":0.002, "磅(lb)":453.59237, "盎司(oz)":28.3495231, "格令(gr)":0.0647989, "长吨(lt)":1016046.9088, "短吨(st)":907184.74, "英担":50802.34544, "美担":45359.237, "英石(st)":6350.29318, "打兰(dr)":1.7718452, "担":50000, "斤":500, "两": 50, "钱":5});
+			affineConvertWidget("#temperature", {"摄氏度(℃)":[1, 0], "华氏度(℉)":[1.8, 32], "开氏度(K)":[1, 273.15], "兰氏度(°R)":[1.8, 273.15 * 1.8], "列氏度(°Re)": [0.8, 0]});
+			convertWidget("#pressure", {"帕斯卡(Pa)":1, "兆帕(MPa)":1e6, "千帕(kpa)":1e3, "百帕(hpa)":100, "标准大气压(atm)":101325, "毫米汞柱(mmHg)":133.3223684, "英寸汞柱(in Hg)":3386.3881579, "巴(bar)":100000, "毫巴(mbar)":100, "磅力/平方英尺(psf)":47.8802569, "磅力/平方英寸(psi)":6894.757, "毫米水柱":9.8066136, "公斤力/平方厘米(kgf/cm²)":98066.5, "公斤力/平方米(kgf/㎡)": 9.80665});
+			convertWidget("#power", {"瓦(W)或焦耳/秒(J/s)或牛顿·米/秒(N·m/s)":1, "千瓦(kW)":1000, "英制马力(hp)":745.699872, "米制马力(ps)":735.49875, "公斤·米/秒(kg·m/s)":9.80665, "千卡/秒(kcal/s)":4184.1004, "英热单位/秒(Btu/s)":1055.05585, "英尺·磅/秒(ft·lb/s)":1.3558179});
+			convertWidget("#energy", {"焦耳(J)":1, "公斤·米(kg·m)":9.8039216, "米制马力·时(ps·h)":2647795.5, "英制马力·时(hp·h)":2684519.5392, "千瓦·时(kW·h)或度":3600000, "卡(cal)":4.1858518, "千卡(kcal)":4185.8518208, "英热单位(btu)":1055.0558526, "英尺·磅(ft·lb)":1.3557484, "千焦(kJ)": 1000});
+			convertWidget("#density", {"千克/立方厘米(kg/cm³)":1e9, "千克/立方分米(kg/dm³)或克/立方厘米(g/cm³)":1e6, "千克/立方米(kg/m³)或克/立方分米(g/dm³)":1e3, "克/立方米(g/m³)":1});
+			convertWidget("#force", {"牛(N)":1, "千牛(kN)":1000, "千克力(kgf)":9.80665, "克力(gf)":0.00980665, "公吨力(tf)":9806.65, "磅力(lbf)":4.448222, "千磅力(kip)":4448.221615, "达因(dyn)":0.00001});
+			convertWidget("#time", {"年(yr)":3600 * 24 * 365.2422, "周(week)":3600 * 24 * 7, "天(d)":3600 * 24, "时(h)":3600, "分(min)":60, "秒(s)":1, "毫秒(ms)":1e-3, "微秒(μs)":1e-6, "纳秒(ns)": 1e-9});
+			convertWidget("#speed", {"米/秒(m/s)":1, "千米/秒(km/s)":1000, "千米/时(km/h)":1000 / 3600, "光速(c)":299792458, "马赫(mach)":340.3, "英里/时(mile/h)":0.44704, "英寸/秒(in/s)":0.0254});
+			convertWidget("#angle", {"圆周":360, "直角":90, "百分度(gon)":0.9, "度(°)":1, "分( ′)":1.0 / 60, "秒(')":1.0 / 3600, "弧度(rad)":180 / Math.PI, "毫弧度(mrad)": 180 / Math.PI / 1000});
+			convertWidget("#storage", {"B": 1, "KB": 1e3, "MB": 1e6, "GB": 1e9, "TB": 1e12, "KiB": 1 << 10, "MiB": 1 << 20, "GiB": 1 << 30, "TiB": Math.pow(2, 40)});
+		</script>
+
+</main>

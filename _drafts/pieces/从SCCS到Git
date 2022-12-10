@@ -1,0 +1,59 @@
+从SCCS到Git--那些年我们一起用过的版本控制系统
+
+版本控制系统作为每个程序员每天生活的一部分，记录了无数个激动的瞬间。让我们缅怀一下几个可能还记得可能已忘记的前度，展望未来的版本控制系统。
+
+元老级的版本控制系统要数始于1972年的SCCS（Source Code Control System），作为AT&T UNIX的一部分发布。从那个时候起，程序员就再也离不开版本控制系统。
+
+由于SCCS当时是私有软件，人们在1982年又开发了RCS（Revision Control System），它后来纳入了GNU项目。借助于diff，RCS的存储效率与SCCS相比有较大提高。
+
+下一个重要的版本控制系统是1990年的CVS（Concurrent Versions System），与两个前度相比，CVS最大的革新在于采用服务器-客户机模型而非本地模型，于是多个程序员可以用各自的终端向中心代码库提交代码，不同程序员可时修改同一文件，从此版本控制系统就是团队开发所不可或缺的好助手。就笔者的印象，在2007年踏入编程领域时，还有不少项目在用CVS。
+
+真正憾动CVS地位是2004年的Apache Subversion（常被称为SVN），SVN在多方面改进了CVS，除用diff提高存储效率外，还支持原子提交、合并跟踪、文件锁、更详细信息等。Subversion至今仍广泛使用。
+
+下一个概念革新为分布式版本管理系统，从此不需要中心服务器，可伸缩性良好，多重副本也提高了可靠性，其中至今广泛使用的有同样始于2005年的Mercurial和Git。
+
+Mercurial的工作流程相对简单。值得一提的是，Mercurial的推可修改别人的本地代码。使用Mercurial的大型项目包括Mozilla Firefox、JDK、Netbeans、Python。
+
+Git的工作流程相对灵活。值得一提的是，Git由于有基于哈希强大的压缩算法，在存储效率从而网络流量和速度上大幅优于前述的其它版本管理系统。使用Git的大型项目包括Linux内核。
+
+有趣的是，分布式版本管理系统并不是马上开始流行，下图显示各版本管理系统受关注的程度：
+
+./img/interest.png
+./img/market.png
+
+一个解释归功于Github以Git为首选的版本管理系统，虽然目前来看，Github似乎已击败了屹立多年的Sourceforge成为最大项目托管网站，但Github也支持svn，Sourceforge也支持git。
+
+其中Git的历史很有意思，2005年Linux社区与当时所用版本管理系统BitKeeper的开发公司关系破裂，在关乎Linux存亡的关键时刻，Linus再一次肩负起历史重任，从头开发一个分布式版本管理系统，结果不仅挽救了Linux，而且催生了Git。
+
+2005年4月6日，Git开发工作展开，2005年4月29日，已经通过评测，2005年6月16日正式投入Linux内核日常管理使用。在这么短的时间就造出了经得起历史考验的重要工具，这充分说明了实际需要才是发明的有效动力。
+
+Apache基金会用自己开发的subversion管理Apache各项目，Linus用自己开发的Git管理Linux内核。可见，它们成功在于吃自己狗食。我们的大学教材写得如此糟糕就在于写的人不用读它。
+
+
+Subversion、Mercurial与Git - Git如何逆袭成功
+
+Apache Subversion（简称SVN）始于2004年，Mercurial和Git则始于2005年，可以说起步时间接近。
+
+./img/market.png
+
+从在自由软件项目中流行度看，开始时SVN一支独秀，而雄霸江湖15年之久的CVS黯然失色，Mercurial和Git则缓慢但稳定地发展。很明显，SVN把大部分CVS项目抢过来了。SVN与CVS同样采用服务器-客户机模型，而SVN借助diff大幅提高存储效率，并有一些其它改进，因此SVN对CVS用户吸引力大，迁移也容易。
+
+然而，SVN吸引新项目方面似乎不如Mercurial和Git，结果Git在2011年跑出。此后，Git持续高走，SVN则掉到Mercurial的水平再一同慢慢走下坡路。2015年Stackoverflow调查指69%开发者使用Git，抛离SVN。
+
+当然，SVN对于一些企业内部项目还是有优势的，它们想要更精细的访问控制，它们可能还愿意买Perforce。
+
+Mercurial和Git这两个分布式版本管理之所以吸引新项目，与协作的增多有关。
+
+分布式版本管理不再有一个中央仓库（虽然很多人把SourceForge、Github、GitLab之类的仓库看作一个），每个人都有自己的工作副本，于是只有在分享改动时需要网络，其它操作如提交和回滾飞快。Fork也变得更容易了。
+
+Mercurial与Git都是在Linux 内核当时所用版本管理系统BitKeeper不再免费时，作为替代品开发的，Git早几个月启用，用了两个月打造就紧急正式投入Linux内核日常管理使用，占了先机。
+
+Git作为早产儿，由于迫切性，没有成熟已经投入使用，早年有因接近底层而难用的指责，但情况很快改观（不仅命令已经与Mercurial对标，还自带图形介面）。在Linux这超大规模项目的严峻考验下，Git进步神速。
+
+另一方面，Mercurial也有大型项目包括Mozilla Firefox、JDK、Netbeans、Python用。
+
+可见Mercurial和Git都能支撑大型项目，特性相互抄袭后进一步趋同，大多数用户并不会觉得有大区别。所以Git后来比Mercurial更受欢迎可能根本就是没道理的。
+
+有人说是GitHub的功劳，但从数据上看GitHub出现前后Git流行趋势没有明显变化，再说Google code先支持Mercurial。
+
+无论如何，Git的影响大大超出了Linux社区，在Windows、Mac OS X平台也大受欢迎，各种IDE和编辑器相继集成Git，微软的Visual Studio 2013开始自带git客户端，苹果的Xcode中创建项目时默认就是同时初始化git仓库。

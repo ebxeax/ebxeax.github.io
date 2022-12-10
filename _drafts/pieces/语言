@@ -1,0 +1,90 @@
+支撑世界的编程语言
+
+汇编语言：虽然C在80年代抢了它的大部分市场，但操作系统和驱动之类始终有小部分要用它写。
+
+Fortran：数值计算领域的绝对王者，工程和科学计算离不开它，惟一与它正面竞争的Matlab一点动不了它的地位。
+
+COBOL：不管在学校被无视在业界被看淡，在金融和会计等领域一直有主导地位，很多依赖大型机的银行系统还在靠它，近年开始被Java和集群威胁。
+
+C：为重新实现UNIX而设计，自然被用于实现操作系统和系统工具，如Linux、GCC等，也被用于实现多种其它主要语言。
+
+C++：特性堆砌而成的杂乱语言，由于与C大致兼容，90年代不少大型应用程序部分用它写，见http://www.stroustrup.com/applications.html。通常认为6万行以上规模才显示出C++的OOP和模板之类与C相比的优势。
+
+Java：虽然败走电视机顶盒和applet，但在服务器端扳回来了。另外，Andriod上的app几乎全用Java写。目前Java毫无疑问是最流行的语言，生态也是最丰富的。
+
+C#：与Java很像，混了C++的东西，Windows下很多较新的应用程序都用它写。
+
+JavaScript：网页客户端脚本的惟一事实标准，大部分网站依赖于它。近年凭借Node.js正开拓其它市场。
+
+PHP：网页服务器端脚本的事实标准，相当多网站依赖于它。
+
+Perl：因出色的文本（最重要的数据类型）处理表现，广泛用于UNIX系统管理，很大程度上取代了SHELL和AWK之类。
+
+Objective-C和Swift：由于苹果强推，iOS和Mac OS X上的应用多用它们。
+
+Erlang：与众不同的设计让大并发、容错、可用性极佳，用于分布式系统如数据库（Amazon的SimpleDB）、电信（Ericsson、Cisco）、聊天服务器（XMPP、WhatsApp、Facebook）。
+
+个别情况重要的语言
+
+Emacs Lisp、XSLT、bash、Lua（游戏逻辑）、Common Lisp（快速原型如Yahoo! Store、计算机代数软件如Maxima、Axiom）、Scheme（扩展如GIMP支持guile脚本）
+
+名过其实的编程语言
+
+Basic：没错普及了编程，但没写出什么好东西。Visual Basic曾让它流行过，但MS已经更倾向C#。
+
+Python：Python和Perl一样为编写即弃代码订造，动态类型使它不适合用于构建可靠软件，而且过于动态限制了工具的作用。多用作胶水而非程序的核心部分，如ubuntu中用Python给一些系统工具包装GUI，也有时作原型或教学用途。
+
+Ruby：Rails框架曾让它进入过公众视野，主要问题同Python，还有奇怪的鸭子类型。一些网站如Github、Twitter早期用它搭原型，但由于性能硬伤，做大以后要改其它语言。
+
+Scala：号称结合了OOP和FP，结果有点杂乱。个别网站（例如Twitter）后台用Scala写一部分，但未见它独当一面的时候，还不如低调的Groovy。
+
+Go：与C相比只加入了其它语言早就有的东西，与C++比包袱较少但与C仍走得很近。它以分布式为宣传重点，但并发模型基本上就是UNIX的，远不如Erlang。Docker和MangoDB用Go写，但其实它们对语言没有特别的要求，换个也行。
+
+历史上有功但现实中不再重要的编程语言
+
+PL/1、APL、Algor、Simula、Pascal、ML、Ada、Smalltalk、Prolog、Tcl、Haskell
+
+各种语言资源
+
+现在出书很容易，结果参差不齐。选对书是重要的，特别是功力较差的话很易被误导。但恰好这些眼光不行的人最常上书商的当受骗，因为写得烂的书才需要打广告，在各种平台秀存在感。
+
+通常以貌取书已经可以很准确，从标题（不用加无谓的修饰，如不要Sam的“21天/24小时学会”、“从入门到精通”、“宝典”、“经典”、“详解”、“精解”、“教程”）、作者（通常程序员优于培训教师优于网友合编优于高校教师，强调作品而非学历职位）、封面（简约而非浮夸）、目录（直白、与同类书不同）、索引（最好有）和排版（规范、代码有高亮、没有多余干扰），还有就是随机读一段。记住，好的书不会特意去吸引眼球，所以过于吸引的多半不是好东西。
+
+通常翻译版比较好，因为较差的一批外文书被过滤掉。最实用的技巧就是，首选O'Reilly的动物书，这不仅因为我就是看动物书成长起来的感情因素，而且O'Reilly就是质量保证，大多至少有中上水平。当然机工黑皮书也不乏经典。
+
+网上信息也不容乐观，搜索引擎倾向于搜出ad-hoc、过时和片面的博客和问答。大部分情况下，坚持从有关技术的官网出发最为靠谱，因为发明者更了解它，也是最愿意下功夫推广它的。
+
+Scheme的话出发点当然是 http://www.schemers.org/，还有绝对经典的编程启蒙教材Harold Abelson, Gerald Jay, Julie Sussman的《计算机程序的构造和解释》。
+
+C语言惟一最经典的教材和参考手册当然是Brian W.Kernighan和 Dennis M.Ritchie的《C程序设计语言》。补品有《C专家编程》、《程序设计实践》。
+
+C++的教材建议Bjarne Stroustrup的《C++程序设计原理与实践》，参考书则有Bjarne Stroustrup的《C++程序设计语言》。当然还有《Effective C++》和《设计模式》之类的补品。
+但C++作为已知最复杂语言之一（只有Ada可以与它一拼，只是Ada已经半死，而C++还在变复杂的路上极速前进，而基本缺陷依旧），所有书都只蜻蜒点水。
+
+Java的话出发点当然是 http://docs.oracle.com/javase/8/docs/ ，API、工具用法、教材、语言规范、虚拟机规范都有。另外推荐Cay S. Horstmann的《Java核心技术》，接着补品有Joshua Bloch的《Effective Java》。
+
+C#的话出发点当然是 https://msdn.microsoft.com/zh-cn/library/618ayhy6.aspx 。
+
+JavaScript很遗憾没官网，https://developer.mozilla.org/zh-CN/docs/Web/JavaScript 还行吧，不行就买本David Flanagan的《JavaScript权威指南》有比较各浏览器。
+
+PHP的话出发点当然是 http://php.net/ 。
+
+Perl的话出发点当然是 https://www.perl.org/ 。
+
+Objective-C的话出发点当然是 https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html 。
+
+Swift的话出发点当然是 http://www.apple.com/cn/swift/ 。
+
+Erlang的话出发点当然是 http://www.erlang.org/ 。
+
+Python的话出发点当然是 https://www.python.org/ ，教材到参考文档都全，包括Allen B. Downey《像计算机科学家一样思考Python》电子版。另外哲思社区的《可爱的Python》别有一番风味。
+
+Ruby的话出发点当然是 https://www.ruby-lang.org/zh_cn/ 。
+
+Ocaml的话出发点当然是 http://ocaml.org/ 。
+
+Haskell的话出发点当然是 http://www.haskell.org/ 。
+
+Tcl的话出发点当然是 http://www.tcl.tk/ ，语法太简单，在linux下干脆man tcl。类似地想知bash怎样用，man bash足矣。
+
+Fortran、COBOL、Prolog、Ada之类资源分散就要小心点了。
