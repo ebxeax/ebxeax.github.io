@@ -19,7 +19,7 @@
 
 ## [订阅RSS]({{ '/feed.xml' | relative_url }})
 
-## [实用工具]({{ '/JavascriptVisual/Algorithms.html' | relative_url }})
+## [可视化算法]({{ '/JavascriptVisual/Algorithms.html' | relative_url }})
 
 ## [关于作者]({{ '/about.html' | relative_url }})
 
