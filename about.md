@@ -43,7 +43,7 @@ Big data offline processing application technology and system implementation, De
 
 [Mnist-recognition](https://github.com/ebxeax/mnist-recognization) Build a CNN network and use Qt5 to realize handwritten digit recognition based on the Mnist data set, use deep convolutional network and Opencv to achieve image recognition, use Mnist handwritten digit data set, use Qt to implement GUI, realize two modes of handwritten digit recognition and data set extraction test.
 
-[IMS-1.0](https://gitee.com/Carrawayang/ims) Use Flask to implement web pages and functions, use Tkinter to implement GUI, and use SVD-based methods to implement face recognition login, database support based on Mysql, use multi-table operation and multi-table query.
+[IMS-1.0](https://gitee.com/ebxeax/ims) Use Flask to implement web pages and functions, use Tkinter to implement GUI, and use SVD-based methods to implement face recognition login, database support based on Mysql, use multi-table operation and multi-table query.
 
 ## Essay 
 
