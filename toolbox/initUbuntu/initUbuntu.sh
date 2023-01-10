@@ -6,4 +6,4 @@ sudo apt install python3-pip git cmake
 python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 
-pip3 install d2l
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple d2l 
