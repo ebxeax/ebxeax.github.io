@@ -1,0 +1,4 @@
+d2l
+tensorflow-gpu
+visdom
+opencv-python
